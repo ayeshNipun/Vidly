@@ -15,7 +15,19 @@
 {
     <table class="table">
         <thead>
-            <tr>Customer Name</tr>
+        <tr>Customer Name</tr>
         </thead>
+        
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td> @Html.ActionLink(customer.Name, "Details", "Customers", new
+                         {
+                             id = customer.Id
+                         }, null)</td>
+                </tr>
+            }
+        </tbody>
     </table>
 }

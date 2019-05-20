@@ -17,6 +17,11 @@ namespace Vidly.Controllers
             return View(customers);
         }
 
+        public ActionResult Details(int id)
+        {
+            return View("Details");
+        }
+
         public IEnumerable<Customer> getCustomers()
         {
             return new List<Customer>
