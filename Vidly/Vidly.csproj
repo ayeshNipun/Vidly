@@ -233,6 +233,30 @@
     <Compile Include="Migrations\201905231221094_UpdateMovieTable.Designer.cs">
       <DependentUpon>201905231221094_UpdateMovieTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905251353197_changePropsOfMovieClass.cs" />
+    <Compile Include="Migrations\201905251353197_changePropsOfMovieClass.Designer.cs">
+      <DependentUpon>201905251353197_changePropsOfMovieClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905251356104_changePropsOfMovieClass2.cs" />
+    <Compile Include="Migrations\201905251356104_changePropsOfMovieClass2.Designer.cs">
+      <DependentUpon>201905251356104_changePropsOfMovieClass2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905251400114_changePropsOfMovieClass3.cs" />
+    <Compile Include="Migrations\201905251400114_changePropsOfMovieClass3.Designer.cs">
+      <DependentUpon>201905251400114_changePropsOfMovieClass3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905251403326_changePropsOfMovieClass4.cs" />
+    <Compile Include="Migrations\201905251403326_changePropsOfMovieClass4.Designer.cs">
+      <DependentUpon>201905251403326_changePropsOfMovieClass4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905251411075_changePropsOfMovieClass5.cs" />
+    <Compile Include="Migrations\201905251411075_changePropsOfMovieClass5.Designer.cs">
+      <DependentUpon>201905251411075_changePropsOfMovieClass5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905251430254_changePropsOfMovieClass6.cs" />
+    <Compile Include="Migrations\201905251430254_changePropsOfMovieClass6.Designer.cs">
+      <DependentUpon>201905251430254_changePropsOfMovieClass6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -366,6 +390,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905231221094_UpdateMovieTable.resx">
       <DependentUpon>201905231221094_UpdateMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905251353197_changePropsOfMovieClass.resx">
+      <DependentUpon>201905251353197_changePropsOfMovieClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905251356104_changePropsOfMovieClass2.resx">
+      <DependentUpon>201905251356104_changePropsOfMovieClass2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905251400114_changePropsOfMovieClass3.resx">
+      <DependentUpon>201905251400114_changePropsOfMovieClass3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905251403326_changePropsOfMovieClass4.resx">
+      <DependentUpon>201905251403326_changePropsOfMovieClass4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905251411075_changePropsOfMovieClass5.resx">
+      <DependentUpon>201905251411075_changePropsOfMovieClass5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905251430254_changePropsOfMovieClass6.resx">
+      <DependentUpon>201905251430254_changePropsOfMovieClass6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

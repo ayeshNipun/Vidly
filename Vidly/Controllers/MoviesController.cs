@@ -48,6 +48,7 @@ namespace Vidly.Controllers
             return View("MovieForm", viewModel);
         }
 
+        [HttpPost]
         public ActionResult Save(Movie movie)
         {
             if (movie.Id == 0)
@@ -57,11 +58,11 @@ namespace Vidly.Controllers
             }
             else
             {
-                var movieInDB = _context.Movies.Single(m => m.Id == movie.Id);
-                movieInDB.GenreId = movie.GenreId;
-                movieInDB.Name = movie.Name;
-                movieInDB.NumberInStock = movie.NumberInStock;
-                movieInDB.ReleasedDate = movieInDB.ReleasedDate;
+                var movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
+                movieInDb.Name = movie.Name;
+                movieInDb.GenreId = movie.GenreId;
+                movieInDb.NumberInStock = movie.NumberInStock;
+                movieInDb.ReleasedDate = movie.ReleasedDate;
             }
 
             _context.SaveChanges();
