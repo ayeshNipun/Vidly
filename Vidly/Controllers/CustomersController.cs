@@ -48,6 +48,7 @@ namespace Vidly.Controllers
 
             var viewModel = new CustomerFormViewModel
             {
+                Customer = new Customer(),
                 MembershipTypes = membershipTypes
             };
 
@@ -67,6 +68,7 @@ namespace Vidly.Controllers
 
                 return View("CustomerForm", viewModel);
             }
+
             if (customer.Id == 0)
             {
                 _Context.Customers.Add(customer);
