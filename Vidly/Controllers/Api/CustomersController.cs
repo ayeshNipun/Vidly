@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 using Vidly.Models;
 
@@ -28,7 +29,22 @@ namespace Vidly.Controllers.Api
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
 
+            if (customer == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+
             return customer;
+        }
+
+        //POST api/customers
+        [HttpPost]
+        public Customer CreateCustomer(Customer customer)
+        {
+            if ()
+            {
+                
+            }
         }
     }
 }
