@@ -17,11 +17,12 @@
 
 @if (Model.Any())
 {
-    <table class="table">
+    <table id="customers" class="table">
         <thead>
             <tr>
                 <th>Customer Name</th>
-                <th>Membershp Type</th>
+                <th>Membership Type</th>
+                <th>Delete</th>
             </tr>
         </thead>
 
@@ -36,8 +37,35 @@
                         }, null)
                     </td>
                     <td>@customer.MembershipType.Name</td>
+                    
+                    <td>
+                        <button data-customer-id="@customer.Id" class="btn-link js-delete">Delete</button>
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
+}
+
+@section scripts
+{
+    <script>
+        $(document).ready(function() {
+            $("#customers .js-delete").on("click",
+                function () {                  
+                    var button = $(this);
+                    if (confirm("Are you sure ?")) {
+                        $.ajax({
+                            url: "/api/customers/" + button.attr("data-customer-id"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parents("tr").remove();
+                                console.log("Success");
+                            }
+                        });
+                    }
+                }
+            );
+        });
+    </script>
 }
