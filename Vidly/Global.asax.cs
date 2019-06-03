@@ -16,6 +16,7 @@ namespace Vidly
         protected void Application_Start()
         {
             Mapper.Initialize(m => m.AddProfile<MappingProfile>());
+            Mapper.Initialize(m => m.AddProfile<MappingMovie>());
             GlobalConfiguration.Configure(WebApiConfig.Register);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

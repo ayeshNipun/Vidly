@@ -52,6 +52,8 @@ namespace Vidly.Controllers.Api
             _context.Customers.Add(customer);
             _context.SaveChanges();
 
+            customerDto.Id = customer.Id;
+
             return Created(new Uri(Request.RequestUri + "/" + customer.Id), customerDto);
         }
 
