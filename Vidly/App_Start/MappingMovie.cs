@@ -10,10 +10,6 @@ namespace Vidly.App_Start
 {
     public class MappingMovie : Profile
     {
-        public MappingMovie()
-        {
-            Mapper.CreateMap<Movie, MovieDto>();
-            Mapper.CreateMap<MovieDto, Movie>();
-        }
+        
     }
 }
