@@ -278,6 +278,10 @@
     <Compile Include="Migrations\201905251430254_changePropsOfMovieClass6.Designer.cs">
       <DependentUpon>201905251430254_changePropsOfMovieClass6.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906240705573_SeedUsers.cs" />
+    <Compile Include="Migrations\201906240705573_SeedUsers.Designer.cs">
+      <DependentUpon>201906240705573_SeedUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -605,6 +609,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905251430254_changePropsOfMovieClass6.resx">
       <DependentUpon>201905251430254_changePropsOfMovieClass6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906240705573_SeedUsers.resx">
+      <DependentUpon>201906240705573_SeedUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
