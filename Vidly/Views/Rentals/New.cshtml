@@ -9,12 +9,22 @@
 <form action="/" method="post">
     <div class="form-group">
         <label>Customer</label>
-        <input type="text" value="" id="customer" class="form-control" />
+        <div class="tt-relative">
+            <input type="text" value="" id="customer" class="form-control" />
+        </div>
     </div>
     
     <div class="form-group">
         <label>Movie</label>
-        <input type="text" value="" id="movies" class="form-control" />
+        <div class="tt-relative">
+            <input type="text" value="" id="movie" class="form-control" />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4 col-sm-4">
+            <ul id="movies" class="list-group"></ul>
+        </div>
     </div>
     
     <button class="btn btn-primary">Submit</button>
@@ -24,7 +34,9 @@
 {
     <script>
         $(document).ready(function () {
-            var vm = {};
+            var vm = {
+                movieIds: []
+        };
 
             var customers = new Bloodhound({
                 datumTokenizer: Bloodhound.tokenizers.obj.whitespace('Name'),
@@ -35,6 +47,18 @@
                 }
             });
 
+            $('#customer').typeahead({
+                minLength: 2,
+                highlight: true
+            }, {
+                    name: 'customers',
+                    display: 'name',
+                    source: customers
+                }).on("typeahead:select", function (e, customer) {
+                    vm.customerId = customer.id;
+                }
+            );
+
             var movies = new Bloodhound({
                 datumTokenizer: Bloodhound.tokenizers.obj.whitespace('Name'),
                 queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -44,7 +68,7 @@
                 }
             });
 
-            $('#movies').typeahead({
+            $('#movie').typeahead({
                 minLength: 2,
                 highlight: true
             }, {
@@ -52,21 +76,14 @@
                     display: 'name',
                     source: movies
                 }).on("typeahead:select", function (e, movie) {
-                    vm.movieId = movie.id;
+                    $("#movies").append("<li class='list-group-item'>" + movie.name + "</li>");
+
+                    $("#movie").typeahead("val", "");
+                    vm.movieIds.push(movie.id);
                 }
                 );
 
-            $('#customer').typeahead({
-                minLength: 2,
-                highlight: true
-            }, {
-                name: 'customers',
-                display: 'name',
-                source: customers
-            }).on("typeahead:select", function(e, customer) {
-                    vm.customerId = customer.id;
-                }
-            );
+            
         })
     </script>
 
